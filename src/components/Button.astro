@@ -1,19 +1,21 @@
 ---
+import '../styles/tailwind.css';
 // Henter parametrene fra Astro.props
 const { variant= "primary", size = "medium" } = Astro.props; 
  
 //Definer den styling (Tailwind classes, der gør sig gældende for alle knapper)
-const buttonStyling = "border-2 px-16 py-4"; 
+const buttonStyling = "w-full py-16 min-w-sm rounded-tl-2xl rounded-br-2xl"; 
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige varianter 
 const variantClasses = {
-"primary": "border-black", /* border-primary-500 */
-"secondary": "border-blue-500" /* border-secondary-500 */
+"primary": "bg-primary-400 display uppercase text-secondary-400", /* border-primary-500 */
+"secondary": "bg-primary-500",
+"third": "bg-primary-700" /* border-secondary-500 */
 };
  
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskelligeog størrelser.
 const sizeClasses = {
-"large": "text-4xl",
+"large": "text-6xl display uppercase text-secondary-600 font-bold",
 "medium": "text-xl",
 "small": "text-large"
 };
